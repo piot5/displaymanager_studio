@@ -1,0 +1,54 @@
+[workspace]
+members = [
+    "apps/displaymanager_studio",
+]
+resolver = "2"
+
+[workspace.dependencies]
+anyhow = "1.0"
+async-trait = "0.1.89"
+base64 = "0.22"
+clap = { version = "4.4", features = ["derive"] }
+env_logger = "0.11"
+futures = "0.3"
+libc = "0.2"
+log = "0.4"
+parking_lot = "0.12.5"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9.34"
+snafu = "0.8"
+tempfile = "3.8"
+thiserror = "2.0"
+tokio = { version = "1.0", features = ["full"] }
+toml = "0.8"
+
+# GUI-spezifische Abhängigkeiten
+bytemuck = { version = "1.13", features = ["derive"] }
+chrono = "0.4.44"
+eframe = { version = "0.27", features = ["persistence", "glow"] }
+egui = "0.27"
+egui_extras = { version = "0.27", features = ["syntect"] }
+image = "0.24"
+pollster = "0.4.0"
+raw-window-handle = "0.6"
+rfd = "0.14"
+rodio = "0.17"
+
+windows = { version = "0.52", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Gdi",
+    "Win32_UI_HiDpi",
+    "Win32_Devices_Display",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Threading",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_System_Registry"
+]}
+
+# Interne Modul-Verknüpfungen (via Git)
+df_ddc = { git = "https://github.com/piot5/displaymanager.git", version = "0.1.0" }
+df_displmgr = { git = "https://github.com/piot5/displaymanager.git", version = "0.1.0" }
+df_displmgr_info = { git = "https://github.com/piot5/displaymanager.git", version = "0.1.0" }
