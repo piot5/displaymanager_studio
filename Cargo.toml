@@ -1,0 +1,21 @@
+[package]
+name = "displaymanager_studio"
+version = "0.1.0"
+edition = "2021"
+description = "GUI application for display management (Rust)"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/piot5/displaymanager_studio"
+readme = "README.md"
+
+[dependencies]
+# Long-term, once published to crates.io:
+# df_displmgr = { version = "0.1.2" }
+# df_displmgr_info = { version = "0.1.1" }
+
+[lib]
+name = "displmgr_gui"
+path = "src/lib.rs"
+
+[[bin]]
+name = "displaymanager_studio"
+path = "src/main.rs"
